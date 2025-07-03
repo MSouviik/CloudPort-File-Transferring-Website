@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloudPort</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/cloud_file_logo.gif" />
+  </head>
+
+  <body>
+    <!-- Background Overlay -->
+    <div class="background-overlay"></div>
+
+    <!-- Navbar -->
+    <header class="header">
+      <div class="logo-container">
+        <img src="assets/cloud_file_logo.gif" alt="Logo" class="logo" />
+        <span class="site-name">CloudPort</span>
+      </div>
+      <nav class="navbar">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ol class="nav-links" id="navLinks">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Send Files</a></li>
+          <li><a href="#">Request Files</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ol>
+      </nav>
+    </header>
+
+    <div class="main-wrapper">
+      <!-- Upload Container -->
+      <section class="upload-container">
+        <div class="drop-zone">
+          <div class="icon-container">
+            <img
+              src="assets/upload_logo.png"
+              alt="file icon"
+              class="center"
+              draggable="false"
+            />
+          </div>
+          <input type="file" id="fileinput" />
+          <div class="title">
+            Drop your Files here or, <span class="browseBtn">browse</span>
+          </div>
+        </div>
+        <div class="progress-container">
+          <div class="bg-progress"></div>
+          <div class="inner-container">
+            <div class="title">Uploading...</div>
+            <div class="percent-container"><span id="Percent">0</span>%</div>
+            <div class="progress-bar"></div>
+          </div>
+        </div>
+        <div class="sharing-container">
+          <p class="expire">Link expires in 24 hours</p>
+          <div class="input-container">
+            <input type="text" id="fileURL" readonly />
+            <i class="fa-solid fa-copy" id="copyBtn"></i>
+          </div>
+          <p>Or Send Via Email</p>
+          <div class="email-container">
+            <form id="emailForm">
+              <div class="field">
+                <label for="sender">Your Email</label>
+                <input type="email" required name="from-email" id="sender" />
+              </div>
+              <div class="field">
+                <label for="receiver">Receiver's Email</label>
+                <input type="email" required name="to-email" id="receiver" />
+              </div>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <div class="upload-vector">
+        <h2 class="text">
+          Share files directly from <br />your device to anywhere
+        </h2>
+        <p class="subtext">
+          Send files of any size directly from your device without ever storing
+          anything online.
+        </p>
+        <ul>
+          <li><i class="fas fa-file-alt"></i>No file size limit</li>
+          <li><i class="fas fa-users"></i>Peer-to-peer</li>
+          <li><i class="fas fa-bolt"></i>Blazingly fast</li>
+          <li><i class="fas fa-shield-alt"></i>End-to-end encrypted</li>
+        </ul>
+      </div>
+    </div>
+    <div class="toast" id="toast">bla bla</div>
+    <footer class="footer">
+      <p>
+        &copy; 2025 CloudPort. All rights reserved <br />
+        Files without limits. Privacy without compromise 🌐.
+      </p>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
